@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#030611"><title>Ayeistero — A Universe of Knowledge</title>
+<style>
+:root{--cyan:#63d9ff;--blue:#557dff;--ink:#eaf4ff;--muted:#9db2d2;--panel:rgba(12,23,49,.78)}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif;background:#030611;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 78% 25%,#173c80 0,transparent 28%),radial-gradient(ellipse at 18% 70%,#111e60 0,transparent 32%),radial-gradient(ellipse at 50% 5%,#10274d 0,transparent 35%),#030611}
+.stars{position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:radial-gradient(2px 2px at 10% 18%,#fff,transparent),radial-gradient(1px 1px at 30% 65%,#9bdfff,transparent),radial-gradient(2px 2px at 75% 13%,#fff,transparent),radial-gradient(1px 1px at 90% 80%,#8bbcff,transparent),radial-gradient(1px 1px at 48% 42%,#fff,transparent),radial-gradient(2px 2px at 15% 90%,#6daaff,transparent);background-size:330px 270px;opacity:.8}
+header{display:flex;align-items:center;justify-content:space-between;padding:17px 5%;border-bottom:1px solid #6aaaff30;background:#050b1bc9;backdrop-filter:blur(14px);position:sticky;top:0;z-index:4}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:2px}.mark{width:38px;height:38px;border:2px solid var(--cyan);border-radius:50%;display:grid;place-items:center;color:white;box-shadow:0 0 18px #3bbcff88;font-size:21px}
+select{background:#101d39;color:white;border:1px solid #5a8cff77;padding:9px 10px;border-radius:12px}
+main{max-width:1050px;margin:auto;padding:28px 18px 60px}.hero{text-align:center;padding:36px 8px 26px;position:relative}
+.brand-art{display:block;width:min(100%,390px);height:auto;margin:0 auto 12px;filter:drop-shadow(0 0 22px #246dff55);border-radius:12px}.orbit{width:118px;height:118px;border:1px solid #69caffaa;border-radius:50%;margin:0 auto 20px;display:grid;place-items:center;box-shadow:0 0 40px #246dff55,inset 0 0 35px #246dff33;position:relative}
+.orbit:after{content:"";position:absolute;width:150px;height:45px;border:2px solid #54bfff;border-radius:50%;transform:rotate(-25deg);box-shadow:0 0 12px #398dff}
+.orbit span{font-size:49px;text-shadow:0 0 22px #8bdfff}
+h1{font-size:clamp(36px,8vw,66px);letter-spacing:5px;margin:8px 0;background:linear-gradient(90deg,#fff,#a8d9ff,#668dff);color:transparent;background-clip:text}
+.tag{letter-spacing:4px;color:#a7d9ff;font-size:11px}.intro{color:var(--muted);line-height:1.6;max-width:600px;margin:16px auto}
+.stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0}.stat{padding:10px 15px;border:1px solid #73aaff38;background:#0b1730aa;border-radius:14px;color:#c7ddff;font-size:13px}
+.section-title{display:flex;align-items:center;justify-content:space-between;margin:28px 2px 14px}.section-title h2{font-size:20px;margin:0}.section-title small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px}
+.card{background:linear-gradient(145deg,#15274bcc,#081126e8);border:1px solid #75aaff3d;border-radius:18px;padding:17px;min-height:142px;box-shadow:0 8px 28px #0005;position:relative;overflow:hidden}
+.card:after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;right:-45px;top:-48px;background:#427dff18;filter:blur(4px)}
+.card .emoji{font-size:27px}.card h3{margin:10px 0 5px;font-size:16px}.card p{color:#a9bbd7;font-size:12px;line-height:1.5;margin:0 0 12px}
+.progress{height:5px;background:#253655;border-radius:9px;overflow:hidden}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#48bfff,#8c7cff);border-radius:9px}
+.card button,.primary{border:1px solid #67caff80;background:linear-gradient(90deg,#1766b8,#5449a9);color:white;border-radius:12px;padding:10px 14px;font-weight:700;margin-top:12px;width:100%}
+.feature{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.feature div{border:1px solid #719bdf33;background:#0b1630bb;padding:15px;border-radius:15px;color:#c9dcf6;font-size:13px}
+footer{text-align:center;color:#7f96ba;font-size:11px;padding:24px 10px;border-top:1px solid #6aaaff22;letter-spacing:2px}
+#lesson{display:none;margin-top:18px}.lessonbox{background:#0d1933;border:1px solid #67bfff66;border-radius:18px;padding:18px}.lessonbox h3{margin-top:0}
+@media(min-width:700px){main{padding-top:40px}.hero{padding:48px 8px 35px}}
+</style></head><body><div class="stars"></div>
+<header><div class="brand"><div class="mark">A</div><span>AYEISTERO</span></div><select id="lang" aria-label="Language"><option value="en">English</option><option value="ur">اردو</option><option value="sd">سنڌي</option></select></header>
+<main><section class="hero"><img class="brand-art" src="ayeistero-logo.jpg" alt="Ayeistero — A Universe of Knowledge"><p class="intro" data-i="intro">Explore the universe of mathematics. Begin at zero, travel through galaxies of knowledge, and reach the frontiers of research.</p><div class="stats"><div class="stat">🌌 <b>8</b> <span data-i="levels">Learning galaxies</span></div><div class="stat">📘 <b>3</b> <span data-i="langs">Languages</span></div><div class="stat">🚀 <span data-i="self">Learn at your pace</span></div></div></section>
+<div class="section-title"><h2 data-i="journey">Your Mathematics Journey</h2><small data-i="choose">Choose a galaxy to explore</small></div>
+<section class="grid" id="levels"></section>
+<section id="lesson"><div class="section-title"><h2 id="lessonTitle">Lesson</h2><small data-i="preview">Learning preview</small></div><div class="lessonbox"><h3 id="topicTitle"></h3><p id="topicText" style="color:#b9cbe4;line-height:1.7"></p><button class="primary" onclick="closeLesson()" data-i="back">Back to galaxies</button></div></section>
+<div class="section-title"><h2 data-i="universe">Inside the Universe</h2></div><section class="feature"><div>🧑‍🚀 <b data-i="tutor">AI Math Tutor</b><br><span data-i="tutord">Guided help, step by step</span></div><div>🧩 <b data-i="quiz">Quizzes & Practice</b><br><span data-i="quizd">Build skills through questions</span></div><div>📈 <b data-i="progress">Progress Tracking</b><br><span data-i="progressd">Follow your learning journey</span></div><div>🏆 <b data-i="goals">Learning Goals</b><br><span data-i="goalsd">Keep moving toward mastery</span></div></section></main>
+<footer>AYEISTERO · A UNIVERSE OF KNOWLEDGE</footer>
+<script>
+const data=[
+['🌱','Zero Level','Numbers, counting, basic operations','صفر کی سطح','انگ، ڳڻپ، بنيادي عمل','Numbers, counting and the four basic operations.','اعداد، ڳڻپ ۽ بنيادي چار عمل سکو.','انگ، ڳڻپ ۽ بنيادي چار عمل سکو.'],
+['🧱','Foundation','Fractions, decimals, percentages, ratios','بنیاد','ڪراچي بنياد','Understand fractions, decimals, percentages and ratios.','کسر، اعشاریے، فیصد اور تناسب سمجھیں۔','ڀاڱا، اعشاريه، سيڪڙو ۽ نسبت سمجھو.'],
+['🏫','School Math','Algebra, geometry, equations','اسکول ریاضی','اسڪول رياضي','Explore algebra, shapes, equations and patterns.','الجبرہ، جیومیٹری اور مساوات سیکھیں۔','الجبر، جاميٽري ۽ مساوات سکو.'],
+['📐','Advanced Math','Trigonometry, functions, logarithms','اعلیٰ ریاضی','اعليٰ رياضي','Study trigonometry, functions and logarithms.','مثلثیات، فنکشنز اور لوگارتھمز پڑھیں۔','ٽريگونوميٽري، فنڪشن ۽ لاگرتھم پڙهو.'],
+['🪐','University Math','Calculus, linear algebra, probability','یونیورسٹی ریاضی','يونيورسٽي رياضي','Enter calculus, linear algebra and probability.','کیلکولس، خطی الجبرا اور احتمال سیکھیں۔','ڪيلڪيولس، لڪير الجبر ۽ امڪان سکو.'],
+['🌠','Higher Mathematics','Real analysis, abstract algebra, topology','اعلیٰ ترین ریاضی','اعليٰ درجي جي رياضي','Explore real analysis, abstract algebra and topology.','ریئل اینالیسس، ایبسٹریکٹ الجبرا اور ٹوپولوجی۔','ريل ايناليسس، ايبسٽريڪٽ الجبر ۽ ٽوپالاجي.'],
+['🔭','Research-Level Math','Number theory, differential geometry, functional analysis','تحقیقی سطح کی ریاضی','تحقيقي سطح جي رياضي','Study advanced number theory, differential geometry and functional analysis.','ایڈوانسڈ نمبر تھیوری، ڈیفرینشل جیومیٹری اور فنکشنل اینالیسس۔','ايڊوانسڊ نمبر ٿيوري، ڊفرينشل جاميٽري ۽ فنڪشنل ايناليسس.'],
+['🛰️','PhD / Specialist Topics','Logic, advanced PDEs, algebraic geometry','پی ایچ ڈی / خصوصی موضوعات','پي ايڇ ڊي / خاص موضوع','Reach mathematical logic, advanced PDEs and algebraic geometry.','ریاضیاتی منطق، ایڈوانسڈ PDEs اور الجبرائی جیومیٹری۔','رياضي منطق، ايڊوانسڊ PDEs ۽ الجبرائي جاميٽري.']
+];
+const dict={
+en:{tag:'A UNIVERSE OF KNOWLEDGE',intro:'Explore the universe of mathematics. Begin at zero, travel through galaxies of knowledge, and reach the frontiers of research.',levels:'Learning galaxies',langs:'Languages',self:'Learn at your pace',journey:'Your Mathematics Journey',choose:'Choose a galaxy to explore',universe:'Inside the Universe',tutor:'AI Math Tutor',tutord:'Guided help, step by step',quiz:'Quizzes & Practice',quizd:'Build skills through questions',progress:'Progress Tracking',progressd:'Follow your learning journey',goals:'Learning Goals',goalsd:'Keep moving toward mastery',preview:'Learning preview',back:'Back to galaxies',start:'Explore galaxy'},
+ur:{tag:'علم کی ایک کائنات',intro:'ریاضی کی کائنات دریافت کریں۔ صفر سے آغاز کریں، علم کی کہکشاؤں کا سفر کریں اور تحقیق کی نئی سرحدوں تک پہنچیں۔',levels:'تعلیمی کہکشائیں',langs:'زبانیں',self:'اپنی رفتار سے سیکھیں',journey:'آپ کا ریاضی کا سفر',choose:'دریافت کے لیے کہکشاں منتخب کریں',universe:'کائنات کے اندر',tutor:'اے آئی ریاضی استاد',tutord:'قدم بہ قدم رہنمائی',quiz:'کوئز اور مشق',quizd:'سوالات سے مہارت بڑھائیں',progress:'تعلیمی پیش رفت',progressd:'اپنے سفر کو دیکھیں',goals:'تعلیمی اہداف',goalsd:'مہارت کی طرف بڑھتے رہیں',preview:'سبق کا نمونہ',back:'کہکشاؤں پر واپس',start:'کہکشاں دیکھیں'},
+sd:{tag:'علم جي هڪ ڪائنات',intro:'رياضي جي ڪائنات ڳوليو. صفر کان شروع ڪريو، علم جي ڪهڪشائن جو سفر ڪريو ۽ تحقيق جي نئين حدن تائين پهچو.',levels:'سکيا جون ڪهڪشائون',langs:'ٻوليون',self:'پنهنجي رفتار سان سکو',journey:'توهان جو رياضي وارو سفر',choose:'ڳولا لاءِ ڪهڪشان چونڊيو',universe:'ڪائنات جي اندر',tutor:'اي آءِ رياضي استاد',tutord:'قدم بہ قدم رهنمائي',quiz:'ڪوئز ۽ مشق',quizd:'سوالن ذريعي مهارت وڌايو',progress:'سکيا جي اڳڀرائي',progressd:'پنهنجو سفر ڏسو',goals:'سکيا جا مقصد',goalsd:'مهارت ڏانهن اڳتي وڌو',preview:'سبق جو جائزو',back:'ڪهڪشائن ڏانهن واپس',start:'ڪهڪشان ڏسو'}
+};
+let lang='en';
+function render(){const d=dict[lang];document.querySelectorAll('[data-i]').forEach(e=>e.textContent=d[e.dataset.i]||e.textContent);document.documentElement.lang=lang;document.documentElement.dir=lang==='ur'?'rtl':'ltr';document.getElementById('levels').innerHTML=data.map((x,i)=>`<article class="card"><div class="emoji">${x[0]}</div><h3>${lang==='en'?x[1]:lang==='ur'?x[3]:x[4]}</h3><p>${lang==='en'?x[2]:lang==='ur'?x[6]:x[7]}</p><div class="progress"><i></i></div><button onclick="openLesson(${i})">${d.start} →</button></article>`).join('')}
+function openLesson(i){const x=data[i];document.getElementById('lessonTitle').textContent=lang==='en'?x[1]:lang==='ur'?x[3]:x[4];document.getElementById('topicTitle').textContent=x[2];document.getElementById('topicText').textContent=lang==='en'?x[5]:lang==='ur'?x[6]:x[7];document.getElementById('lesson').style.display='block';document.getElementById('lesson').scrollIntoView({behavior:'smooth'});}
+function closeLesson(){document.getElementById('lesson').style.display='none';}
+document.getElementById('lang').addEventListener('change',e=>{lang=e.target.value;render()});render();
+</script></body></html>
